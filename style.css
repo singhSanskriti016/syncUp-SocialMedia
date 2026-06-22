@@ -1,0 +1,274 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#fff5f7;
+    color:#333;
+}
+
+/* Navbar */
+
+nav{
+    width:100%;
+    height:75px;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 6%;
+    box-shadow:0 2px 15px rgba(255,105,180,0.15);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo h2{
+    color:#ff4f9a;
+    font-size:30px;
+    font-weight:700;
+}
+
+.searchBox input{
+    width:320px;
+    padding:12px;
+    border:none;
+    outline:none;
+    border-radius:25px;
+    background:#ffe4ee;
+}
+
+.navIcons{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.navIcons i{
+    font-size:20px;
+    color:#ff4f9a;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.navIcons i:hover{
+    transform:scale(1.1);
+}
+
+.navIcons img{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+/* Layout */
+
+.container{
+    width:90%;
+    margin:25px auto;
+    display:grid;
+    grid-template-columns:1fr 2fr 1fr;
+    gap:25px;
+}
+
+/* Left Profile */
+
+.profileCard{
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 4px 20px rgba(255,105,180,0.12);
+}
+
+.profileCard img{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    margin-bottom:10px;
+}
+
+.profileCard h3{
+    color:#ff4f9a;
+}
+
+.profileCard p{
+    color:gray;
+    margin-top:5px;
+}
+
+.stats{
+    display:flex;
+    justify-content:space-between;
+    margin-top:25px;
+}
+
+.stats h4{
+    color:#ff4f9a;
+}
+
+/* Create Post */
+
+.createPost{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 4px 20px rgba(255,105,180,0.12);
+    margin-bottom:20px;
+}
+
+.createPost textarea{
+    width:100%;
+    height:100px;
+    resize:none;
+    border:none;
+    outline:none;
+    background:#fff5f8;
+    border-radius:15px;
+    padding:15px;
+    font-size:16px;
+}
+
+.createPost button{
+    margin-top:15px;
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    background:#ff4f9a;
+    color:white;
+    cursor:pointer;
+    font-weight:600;
+}
+
+/* Posts */
+
+.post{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    margin-bottom:20px;
+    box-shadow:0 4px 20px rgba(255,105,180,0.12);
+}
+
+.postTop{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:15px;
+}
+
+.postTop img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+}
+
+.postTop h4{
+    color:#ff4f9a;
+}
+
+.postTop p{
+    color:gray;
+    font-size:13px;
+}
+
+.postText{
+    line-height:1.7;
+    margin-bottom:15px;
+}
+
+.postActions{
+    display:flex;
+    justify-content:space-around;
+    padding-top:15px;
+    border-top:1px solid #eee;
+    color:#ff4f9a;
+    font-weight:600;
+    cursor:pointer;
+}
+
+/* Right Side */
+
+.trendCard,
+.suggestionCard{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    margin-bottom:20px;
+    box-shadow:0 4px 20px rgba(255,105,180,0.12);
+}
+
+.trendCard h3,
+.suggestionCard h3{
+    color:#ff4f9a;
+    margin-bottom:15px;
+}
+
+.trendCard p,
+.suggestionCard p{
+    margin-bottom:10px;
+    cursor:pointer;
+}
+
+/* Mobile */
+
+@media(max-width:1000px){
+
+    .container{
+        grid-template-columns:1fr;
+    }
+
+    .right{
+        order:3;
+    }
+
+    .left{
+        order:2;
+    }
+
+    .center{
+        order:1;
+    }
+
+    .searchBox{
+        display:none;
+    }
+
+}
+/* Stories */
+
+.stories{
+    width:90%;
+    margin:20px auto;
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    padding:15px;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 4px 20px rgba(255,105,180,0.12);
+}
+
+.story{
+    text-align:center;
+    cursor:pointer;
+}
+
+.story img{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    border:3px solid #ff4f9a;
+    padding:2px;
+}
+
+.story p{
+    margin-top:8px;
+    font-size:14px;
+    color:#ff4f9a;
+    font-weight:600;
+}
