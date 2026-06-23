@@ -22,7 +22,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 </div>
 
 <div class="searchBox">
-<input type="text" placeholder="Search">
+<input type="text" id="searchInput" placeholder="Search">
 </div>
 
 <div class="navIcons">
@@ -32,10 +32,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <i class="fa-solid fa-compass"></i>
 
 <i class="fa-solid fa-bell"></i>
-
+<span class="notification">3</span>
 <i class="fa-solid fa-message"></i>
 
 <img src="https://i.pravatar.cc/40" alt="">
+
+<button id="logoutBtn">Logout</button>
 
 </div>
 
@@ -159,12 +161,12 @@ Just completed my new Full Stack Project 🚀
 
 <div class="postActions">
 
-<span>
-❤️ 245
+<span class="likeBtn">
+❤️ <span class="count">245</span>
 </span>
 
-<span>
-💬 52
+<span class="commentBtn">
+💬 Comment
 </span>
 
 <span>
@@ -201,12 +203,12 @@ Preparing for placements. Consistency is everything 🔥
 
 <div class="postActions">
 
-<span>
-❤️ 180
+<span class="likeBtn">
+❤️ <span class="count">180</span>
 </span>
 
-<span>
-💬 36
+<span class="commentBtn">
+💬 Comment
 </span>
 
 <span>
@@ -258,7 +260,30 @@ Preparing for placements. Consistency is everything 🔥
 </div>
 
 </div>
+<div id="profilePopup" class="profilePopup">
 
+    <div class="popupContent">
+
+        <h2>Profile</h2>
+
+        <p>
+<strong>Username:</strong>
+<span id="usernameText">Singh_sanskriti</span>
+</p>
+
+        <p><strong>Posts:</strong> 120</p>
+
+        <p><strong>Followers:</strong> 988</p>
+
+        <p><strong>Following:</strong> 320</p>
+<button id="editProfileBtn">
+Edit Profile
+</button>
+        <button id="closePopup">Close</button>
+
+    </div>
+
+</div>
 <script src="script.js"></script>
 
 </body>
