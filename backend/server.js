@@ -91,6 +91,10 @@ app.post("/posts", (req, res) => {
 app.get("/posts", (req, res) => {
     res.json(posts);
 });
+// Get All Users
+app.get("/users", (req, res) => {
+    res.json(users);
+});
 app.listen(5000, () => {
     console.log("Server Running On Port 5000");
 });
