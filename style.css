@@ -336,3 +336,17 @@ nav{
     cursor:pointer;
     margin-right:10px;
 }
+.saveBtn{
+    cursor:pointer;
+    transition:.3s;
+}
+
+.saveBtn:hover{
+    color:#ff4f9a;
+    transform:scale(1.1);
+}
+
+.saved{
+    color:#ff4f9a;
+    font-weight:bold;
+}

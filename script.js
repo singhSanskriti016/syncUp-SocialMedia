@@ -242,3 +242,20 @@ window.addEventListener("load", () => {
     }
 
 });
+let saveBtn = post.querySelector(".saveBtn");
+
+saveBtn.addEventListener("click", function () {
+
+    if(saveBtn.classList.contains("saved")){
+
+        saveBtn.classList.remove("saved");
+        saveBtn.innerHTML = "🔖 Save";
+
+    }else{
+
+        saveBtn.classList.add("saved");
+        saveBtn.innerHTML = "✅ Saved";
+
+    }
+
+});

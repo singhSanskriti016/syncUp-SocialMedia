@@ -1,10 +1,20 @@
 const express = require("express");
 const cors = require("cors");
-
+require("dotenv").config();
+console.log(process.env.MONGO_URI);
+const mongoose = require("mongoose");
 const app = express();
 
 app.use(cors());
 app.use(express.json());
+
+mongoose.connect(process.env.MONGO_URI)
+.then(() => {
+    console.log("MongoDB Connected Successfully");
+})
+.catch((err) => {
+    console.log(err);
+});
 
 let users = [];
 let posts = [];
